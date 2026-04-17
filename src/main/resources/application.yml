@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: roc-leaf
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/leaf?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: leaf
+    password: Leaf@123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    open-in-view: false
+
+leaf:
+  snowflake:
+    worker-id-file: /etc/leaf/worker-id
+    worker-id: 1
+
+server:
+  port: 7801
