@@ -17,7 +17,7 @@ spring:
 leaf:
   snowflake:
     worker-id-file: /etc/leaf/worker-id
-    worker-id: 1l
+    worker-id: 1
 
 server:
   port: 7801
