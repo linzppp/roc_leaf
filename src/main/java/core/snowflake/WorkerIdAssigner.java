@@ -22,12 +22,12 @@ public class WorkerIdAssigner {
     @Value("${leaf.snowflake.worker-id-file}")
     private String workerIdFilePath;
 
-    @Value("${leaf.snowflake.worker-id")
+    @Value("${leaf.snowflake.worker-id:-1}")
     private long workerId;
 
     public long assign() throws IOException {
         long localId = -1;
-        if(Objects.nonNull(this.workerId)){
+        if (workerId >= 0) {
             localId = workerId;
         } else if (StringUtils.isNotBlank(workerIdFilePath)) {
             String content = Files.readString(Paths.get(workerIdFilePath)).trim();
