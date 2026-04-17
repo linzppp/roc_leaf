@@ -20,4 +20,4 @@ leaf:
     worker-id: 1
 
 server:
-  port: 7801
+  port: 8701
